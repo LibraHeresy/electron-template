@@ -2,8 +2,8 @@
  * @Author: zhouyang
  * @Date: 2023-05-15 10:31:29
  * @LastEditors: zhouyang
- * @LastEditTime: 2023-05-15 15:25:01
- * @FilePath: \electron-github-update\electron-app\main.js
+ * @LastEditTime: 2023-06-01 16:17:56
+ * @FilePath: \electron-template\electron-app\main.js
  * @Desc: 描述
  */
 const {
@@ -11,6 +11,9 @@ const {
   BrowserWindow
 } = require("electron");
 const path = require("path");
+
+// 更新程序
+require('update-electron-app')()
 
 const NODE_ENV = process.env.NODE_ENV
 
@@ -38,7 +41,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
-}); 
+});
 
 if (require('electron-squirrel-startup')) {
   app.quit();

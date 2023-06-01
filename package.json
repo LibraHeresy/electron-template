@@ -10,12 +10,14 @@
     "electron:install": "cd ./electron-app && yarn install",
     "electron:start": "wait-on tcp:5173 && cd ./electron-app && yarn start",
     "electron:build": "cd ./electron-app && yarn make",
+    "electron:publish": "cd ./electron-app && yarn publish",
     "vue:install": "cd ./vue-app && yarn install",
     "vue:start": "cd ./vue-app && yarn dev",
     "vue:build": "cd ./vue-app && yarn build",
-    "all:install": "yarn vue:install && yarn electron:install",
+    "all:install": "yarn install && yarn vue:install && yarn electron:install",
     "all:start": "cross-env NODE_ENV=development concurrently -k \"yarn vue:start\" \"yarn electron:start\"",
-    "all:build": "cross-env NODE_ENV=production yarn vue:build && yarn electron:build"
+    "all:build": "cross-env NODE_ENV=production yarn vue:build && yarn electron:build",
+    "all:publish": "yarn electron:publish"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",
