@@ -4,7 +4,7 @@
   "description": "electron 模板",
   "main": "electron-app/main.js",
   "repository": "https://github.com/LibraHeresy/electron-template.git",
-  "author": "LibraHeresy <34244494988@qq.com>",
+  "author": "LibraHeresy",
   "license": "GPL-3.0",
   "scripts": {
     "electron:install": "cd ./electron-app && yarn install",
