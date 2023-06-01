@@ -9,9 +9,24 @@ on:
 
 # 任务
 jobs:
-  build-and-deploy:
+  linux-publish:
     # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      # 生成静态文件
+      - name: Publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: npm run all:install && npm run all:publish
+  windows-publish:
+    # 服务器环境：最新版 windows
+    runs-on: windows-latest
     steps:
       # 拉取代码
       - name: Checkout

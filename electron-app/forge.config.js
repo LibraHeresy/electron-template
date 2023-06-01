@@ -2,7 +2,7 @@
  * @Author: zhouyang
  * @Date: 2023-05-25 09:45:52
  * @LastEditors: zhouyang
- * @LastEditTime: 2023-06-01 16:16:12
+ * @LastEditTime: 2023-06-01 17:09:04
  * @FilePath: \electron-template\electron-app\forge.config.js
  * @Desc: 描述
  */
@@ -37,7 +37,8 @@ module.exports = {
           owner: 'LibraHeresy',
           name: 'electron-template'
         },
-        prerelease: true,
+        prerelease: false,
+        draft: true,
       }
     }
   ],
