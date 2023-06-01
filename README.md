@@ -1,3 +1,3 @@
 # electron-template
 
-electron + Vite + Vue3 + TS
+Electron + Vite + Vue3 + TS
