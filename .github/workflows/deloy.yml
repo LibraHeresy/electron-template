@@ -21,4 +21,6 @@ jobs:
 
       # 生成静态文件
       - name: Publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run all:install && npm run all:publish

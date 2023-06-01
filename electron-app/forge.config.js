@@ -33,7 +33,6 @@ module.exports = {
     {
       name: '@electron-forge/publisher-github',
       config: {
-        authToken: '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',
         repository: {
           owner: 'LibraHeresy',
           name: 'electron-template'
